@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<title>Sixteen Puzzle Solver</title>
+<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/sixteen_puzzle.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>N x M Grid Puzzle</h1>
+            <h2>Inspired by Simon Tatham's <a href="https://www.chiark.greenend.org.uk/~sgtatham/puzzles/js/sixteen.html">Sixteen</a> Puzzle</h2>
+        </div>
+        <div class="buttongroup">
+            <select id="grid_parameters" class="col-lg-1">
+                <option value="2x2">2x2</option>
+                <option value="2x3">2x3</option>
+                <option value="3x2">3x2</option>
+                <option value="3x3" selected="selected">3x3</option>
+                <option value="3x4">3x4</option>
+                <option value="4x3">4x3</option>
+                <option value="4x4">4x4</option>
+            </select>
+            <button type="button" class="btn" id="new_game_button">New game</button>
+            <button type="button" id="restart_button" class="btn">Restart</button>
+        </div>
+        <div class="buttongroup">
+            <button type="button" disabled id="undo_button" class="btn">Undo move</button>
+            <button type="button" disabled id="redo_button" class="btn">Redo move</button>
+        </div>
+        <div class="buttongroup">
+            <div class="popup">
+                <button type="button" id="hint_button" class="btn">Hint</button>
+                <span class="popup_text" id="hint_popup">Hint text here!</span>
+            </div>
+        </div>
+        
+        <br>
+        <div id="game_area">
+            <p id="feedback">Moves: 0</p>
+            <canvas id="puzzle" width="400" height="400">
+                Your browser does not support the canvas element.
+            </canvas>
+        </div>
+        <hr>
+        <div id="instructions">
+            <h3>Instructions:</h3>
+            <p>
+                Use the arrows to sort the grid of numbered tiles.
+                Each move will shift an entire row or column.
+                Every move shifts a tile outside of the puzzle grid and it reappears on the other side of the corresponding row or column.
+                The game is won when the grid is sorted in ascending order from left to right and top to bottom.
+                Hints are available for puzzles of size 3x3 or smaller.
+            </p>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/game.js') }}"></script>
+</body>
+</html> 

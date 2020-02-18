@@ -1,0 +1,71 @@
+/*https://colorhunt.co/palette/159891*/
+body{
+    background-color: #efe9cc;
+}
+
+#puzzle {
+    background-color: white;
+    border: 1px solid #c3c3c3;
+}
+
+.jumbotron {
+    background-color: #eadea6;
+}
+
+.btn {
+    background-color: #f6cd90;
+}
+
+.btn:hover:enabled {
+    background-color: #e2b97c;
+}
+
+select {
+    width: 10em;
+    margin-bottom: 0;
+    border: 1px solid;
+    height: 30px;
+    padding: 6px;
+    background-color: #f6cd90;
+}
+
+.buttongroup {
+    display: inline;
+    padding-bottom: 2px;
+    margin: 2px;
+}
+
+hr {
+    border: 1px solid black;
+}
+
+.popup {
+    position: relative;
+    display: inline-block;
+}
+
+.popup .popup_text {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 150%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.popup .popup_text::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+}
