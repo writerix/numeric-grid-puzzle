@@ -58,11 +58,9 @@ def puzzle_hint():
         response = jsonify({'error': 'No hint was found.'})
         response.status_code = 404
         return response
-    #print(hint.steps)
     ret_val = hint.steps[1:-1].split(',')[-1]
     ret_val = ret_val.replace("'", "")
     ret_val = ret_val.lstrip()
-    #print(ret_val)
     return jsonify({'suggestedMove': ret_val})
 
 @app.route('/')
