@@ -14,7 +14,7 @@ What makes this implementation special is that hints are available for puzzles u
 To get this Flask site running locally:
 
 0. Make sure you have Python 3.7 available and clone the repository.
-1. While optional, it is highly recommended to create your virtual environment, and activate it as described [here](https://docs.python.org/3/library/venv.html).
+1. While optional, it is highly recommended to create your virtual environment, and activate it as described [here](https://docs.python.org/3.7/library/venv.html).
 2. Use pip to install all requirements in requirements.txt: `pip install -r requirements.txt`
 3. Tests may be run with the command: `python -m unittest`
 4. To launch: `python routes.py`
