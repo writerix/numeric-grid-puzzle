@@ -6,7 +6,7 @@ Online demo: https://numeric-grid-puzzle.appspot.com/
 ## Background
 The Sixteen puzzle challenges the user to sort a grid of numbered tiles. Unlike the Fifteen puzzle there isn't an empty space. Each move will shift an entire row or column. Every move shifts a tile outside of the puzzle grid and it reappears on the other side of the corresponding row or column.
 
-![example 3x3 unsolved puzzle](example_game.jpg "Example 3x3 unsolved puzzle")
+![example 3x3 unsolved puzzle interaction](example_interaction.gif "Example 3x3 unsolved puzzle interaction")
 
 What makes this implementation special is that hints are available for puzzles up to size 3x3.
 
