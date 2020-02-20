@@ -18,3 +18,10 @@ To get this Flask site running locally:
 2. Use pip to install all requirements in requirements.txt: `pip install -r requirements.txt`
 3. Tests may be run with the command: `python -m unittest`
 4. To launch: `python routes.py`
+
+## Customization
+The JavaScript source file `js_src/game.js` uses newer language features such as classes and keywords such as `let` and `const`. For backwards compatibility, the transcompiler [Babel](https://babeljs.io/) has been used. Minification was then achieved with [minify](https://www.npmjs.com/package/minify). The resulting source file then appears in `static/js`. A build script is included so that changes made to `js_src/game.js` can easily be prepared for distribution.
+
+Using the Node.js command prompt:
+1. Install the build script dependencies with `npm install`
+2. The build script can be run with `npm run build`
