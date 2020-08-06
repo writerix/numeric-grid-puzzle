@@ -1,14 +1,16 @@
 {
     "name": "game.js-distribution",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "scripts": {
         "build": "npm run transpile && minify ./js_src/babel_game.js > ./static/js/game.js",
         "transpile": "babel ./js_src/game.js -o ./js_src/babel_game.js"
     },
     "devDependencies": {
-        "@babel/cli": "^7.8.4",
-        "@babel/core": "^7.9.0",
-        "@babel/preset-env": "^7.9.0",
+        "@babel/cli": "^7.10.5",
+        "@babel/core": "^7.11.1",
+        "@babel/preset-env": "^7.11.0"
+    },
+    "dependencies": {
         "minify": "^5.1.1"
     }
 }
